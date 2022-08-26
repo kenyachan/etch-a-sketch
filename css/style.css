@@ -2,3 +2,19 @@
     padding: 0;
     margin: 0;
 }
+
+#grid-container {
+    display: grid;
+    max-width: fit-content;
+    /* grid-template-columns: repeat(8, 1fr); */
+    justify-content: start;
+    
+    
+}
+
+.grid-item {
+    width: 5px;
+    height: 5px;
+    
+    border: 0.5px solid lightgrey;
+}
