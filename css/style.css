@@ -4,19 +4,18 @@
 }
 
 #grid-container {
+    margin: 1rem;
+    padding: 1px;
+    border: 1px solid black;
     display: grid;
-    max-width: fit-content;
-    /* grid-template-columns: repeat(8, 1fr); */
-    justify-content: start;
-    
-    
+    gap: 0;
+    max-width: 50vh;
+    max-height: 50vh;
 }
 
 .grid-item {
-    width: 5px;
-    height: 5px;
-    
-    border: 0.5px solid lightgrey;
+    outline: 1px solid lightgrey;
+    padding: 50%;
 }
 
 .drawn {
