@@ -20,7 +20,7 @@ function draw() {
 function updateSliderValueDisplay() {    
     let sliderDisplayValue = document.querySelector('#slider-value');
 
-    sliderDisplayValue.textContent = `${this.value}x${this.value}`;
+    sliderDisplayValue.textContent = `${this.value} x ${this.value}`;
 }
 
 function updateGrid() {
@@ -39,7 +39,7 @@ function initiateSettings() {
     slider.addEventListener('change', updateGrid);
 
     let sliderDisplayValue = document.querySelector('#slider-value');
-    sliderDisplayValue.textContent = `${slider.value}x${slider.value}`;
+    sliderDisplayValue.textContent = `${slider.value} x ${slider.value}`;
 }
 
 initiateSettings()
