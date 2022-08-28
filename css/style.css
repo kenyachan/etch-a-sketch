@@ -11,6 +11,11 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -18,6 +23,9 @@ body {
 }
 
 main {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
     flex: 1 1 auto;
 }
 
@@ -28,6 +36,29 @@ footer {
     padding: 1rem 4rem;
 }
 
+footer a .fa-github {
+    font-size: 2rem;
+    color: black;
+}
+
+#settings {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    align-content: center;
+}
+
+.label {
+    font-weight: bolder;
+}
+
+#clear-button {
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+}
+
 #grid-container {
     margin: 1rem;
     padding: 1px;
@@ -36,6 +67,7 @@ footer {
     gap: 0;
     max-width: 50vh;
     max-height: 50vh;
+    width: 50vh;
 }
 
 .grid-item {
