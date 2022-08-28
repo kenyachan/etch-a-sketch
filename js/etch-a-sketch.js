@@ -36,7 +36,7 @@ function updateGrid(size) {
 function initiateSettings() {
     let slider = document.querySelector('#slider');
     slider.addEventListener('input', updateSliderValueDisplay);
-    slider.addEventListener('change', updateGrid(slider.value));
+    slider.addEventListener('change', () => updateGrid(slider.value));
 
     let sliderDisplayValue = document.querySelector('#slider-value');
     sliderDisplayValue.textContent = `${slider.value} x ${slider.value}`;
@@ -46,3 +46,6 @@ function initiateSettings() {
 }
 
 initiateSettings();
+
+// TODO: create initiate function that gets the initial grid value from the slider? and/or set slider initial value?
+createGrid(64);
