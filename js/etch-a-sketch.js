@@ -13,8 +13,23 @@ function createGrid(size) {
     }
 }
 
-function draw(gridItem) {
-    gridItem.target.classList.add('drawn');
+function draw() {
+    this.classList.add('drawn');
 }
 
+function updateSliderValueDisplay() {    
+    let sliderDisplayValue = document.querySelector('#slider-value');
+
+    sliderDisplayValue.textContent = `${this.value}x${this.value}`;
+}
+
+function initiateSettings() {
+    let slider = document.querySelector('#slider');
+    slider.addEventListener('input', updateSliderValueDisplay);
+
+    let sliderDisplayValue = document.querySelector('#slider-value');
+    sliderDisplayValue.textContent = `${slider.value}x${slider.value}`;
+}
+
+initiateSettings()
 createGrid(64);
