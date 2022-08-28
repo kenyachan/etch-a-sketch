@@ -23,24 +23,26 @@ function updateSliderValueDisplay() {
     sliderDisplayValue.textContent = `${this.value} x ${this.value}`;
 }
 
-function updateGrid() {
+function updateGrid(size) {
     let grid = document.querySelector('#grid-container');
 
     while (grid.hasChildNodes()) {
         grid.removeChild(grid.firstChild);
     }
 
-    createGrid(this.value);
+    createGrid(size);
 }
 
 function initiateSettings() {
     let slider = document.querySelector('#slider');
     slider.addEventListener('input', updateSliderValueDisplay);
-    slider.addEventListener('change', updateGrid);
+    slider.addEventListener('change', updateGrid(slider.value));
 
     let sliderDisplayValue = document.querySelector('#slider-value');
     sliderDisplayValue.textContent = `${slider.value} x ${slider.value}`;
+
+    let clearButton = document.querySelector('#clear-button');
+    clearButton.addEventListener('click', () => updateGrid(slider.value));
 }
 
-initiateSettings()
-createGrid(64);
+initiateSettings();
