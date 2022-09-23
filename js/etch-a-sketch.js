@@ -8,19 +8,11 @@ function createGrid(size) {
         let gridItem = document.createElement('div')
         
         gridItem.classList.add('grid-item');
-        gridItem.addEventListener('mouseover', draw);
+        gridItem.addEventListener('mouseover', () => {
+            gridItem.classList.add('drawn')
+        });
         grid.append(gridItem);
     }
-}
-
-function draw() {
-    this.classList.add('drawn');
-}
-
-function updateSliderValueDisplay() {    
-    let sliderDisplayValue = document.querySelector('#slider-value');
-
-    sliderDisplayValue.textContent = `${this.value} x ${this.value}`;
 }
 
 function updateGrid(size) {
@@ -34,14 +26,15 @@ function updateGrid(size) {
 }
 
 function initiateSettings() {
-    let slider = document.querySelector('#slider');
-    slider.addEventListener('input', updateSliderValueDisplay);
-    slider.addEventListener('change', () => updateGrid(slider.value));
+    const slider = document.querySelector('#slider');
+    const sliderDisplayValue = document.querySelector('#slider-value');
+    const clearButton = document.querySelector('#clear-button');
 
-    let sliderDisplayValue = document.querySelector('#slider-value');
     sliderDisplayValue.textContent = `${slider.value} x ${slider.value}`;
-
-    let clearButton = document.querySelector('#clear-button');
+    slider.addEventListener('input', () => {
+        sliderDisplayValue.textContent = `${slider.value} x ${slider.value}`;
+    });
+    slider.addEventListener('change', () => updateGrid(slider.value));
     clearButton.addEventListener('click', () => updateGrid(slider.value));
 }
 
