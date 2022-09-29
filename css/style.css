@@ -70,15 +70,12 @@ footer a .fa-github {
     padding: 1px;
     border: 1px solid black;
     display: grid;
-    gap: 0;
-    max-width: 50vh;
-    max-height: 50vh;
     width: 50vh;
+    height: 50vh;
 }
 
 .grid-item {
     outline: 1px solid lightgrey;
-    padding: 50%;
 }
 
 .drawn {
