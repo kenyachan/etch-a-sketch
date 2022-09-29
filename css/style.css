@@ -53,6 +53,12 @@ footer a .fa-github {
     display: flex;
     flex-direction: column;
     width: 75%;
+    gap: 0.5rem;
+}
+
+#slider-container>div {
+    display: flex;
+    justify-content: space-between;
 }
 
 .label {
