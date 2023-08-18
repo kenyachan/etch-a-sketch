@@ -88,13 +88,14 @@ footer a .fa-github {
 #grid-container {
     margin: 1rem;
     padding: 1px;
-    border: 1px solid black;
+    outline: 1px solid black;
     display: grid;
-    width: 50vh;
-    height: 50vh;
+    width: 50svh;
+	height: 50svh;
 }
 
 .grid-item {
+	aspect-ratio: 1/1;
     outline: 1px solid lightgrey;
 }
 
